@@ -1,0 +1,133 @@
+<div id="wrapper">
+
+  <!-- 1. Thanh Sidebar bên trái -->
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="sidebar">
+    <!-- Logo thương hiệu -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center text-white py-4 text-decoration-none"
+      href="#">
+      <div class="sidebar-brand-icon me-2">
+        <i class="fa-solid fa-gauge-high fa-2x"></i>
+      </div>
+      <div class="sidebar-brand-text fw-bold fs-5">SB ADMIN <sup>2</sup></div>
+    </a>
+
+    <hr class="sidebar-divider my-0 border-light opacity-25">
+
+    <!-- Mục Dashboard -->
+    <li class="nav-item">
+      <a class="nav-link active" href="#">
+        <i class="fa-solid fa-fw fa-tachometer-alt me-2"></i>
+        <span>Bảng điều khiển</span>
+      </a>
+    </li>
+
+    <hr class="sidebar-divider my-2 border-light opacity-25">
+
+    <div class="sidebar-heading my-2">Quản lý hệ thống</div>
+
+    <!-- Mục Danh sách đối tượng -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fa-solid fa-fw fa-box me-2"></i>
+        <span>Danh sách dữ liệu</span>
+      </a>
+    </li>
+
+    <!-- Mục Thêm mới -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fa-solid fa-fw fa-plus-circle me-2"></i>
+        <span>Thêm mới</span>
+      </a>
+    </li>
+
+    <!-- Mục Tài khoản -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fa-solid fa-fw fa-user me-2"></i>
+        <span>Tài khoản người dùng</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- 2. Khối nội dung chính bên phải -->
+  <div id="content-wrapper">
+    <div id="content">
+
+      <!-- Topbar (Thanh tìm kiếm & thông tin tài khoản) -->
+      <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow-sm px-4">
+        <!-- Form tìm kiếm (Đáp ứng tiêu chí tìm kiếm của đề án) -->
+        <form class="d-none d-sm-inline-block form-inline me-auto my-2 my-md-0 mw-100">
+          <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Tìm kiếm nhanh..."
+              aria-label="Search">
+            <button class="btn btn-primary" type="button">
+              <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Trạng thái tài khoản (Đáp ứng tiêu chí Auth của đề án) -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark d-flex align-items-center text-decoration-none" href="#">
+              <span class="me-2 d-none d-lg-inline text-gray-600 small fw-bold">Sỳ Chí Khởi (Admin)</span>
+              <img class="img-profile rounded-circle" width="32" height="32"
+                src="https://ui-avatars.com/api/?name=Sy+Chi+Khoi&background=4e73df&color=fff" alt="Avatar">
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nội dung trang con sẽ nạp vào đây -->
+      <div class="container-fluid px-4">
+        <!-- Thẻ thống kê mẫu (Cards) -->
+        <div class="row g-3 mb-4">
+          <div class="col-xl-3 col-md-6">
+            <div class="card border-start border-primary border-4 shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <div class="text-xs fw-bold text-primary text-uppercase mb-1">Tổng số lượng</div>
+                    <div class="h5 mb-0 fw-bold text-gray-800">128 mục</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-solid fa-calendar fa-2x text-secondary opacity-50"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card border-start border-success border-4 shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <div class="text-xs fw-bold text-success text-uppercase mb-1">Đang hoạt động</div>
+                    <div class="h5 mb-0 fw-bold text-gray-800">115 mục</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-solid fa-check-circle fa-2x text-secondary opacity-50"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vùng hiển thị động của các Router Component -->
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white py-3 mt-auto shadow-sm">
+      <div class="container my-auto text-center">
+        <span class="text-muted small">Bản quyền &copy; Đề án Web Front-End 2026 — Sỳ Chí Khởi</span>
+      </div>
+    </footer>
+  </div>
+
+</div>
